@@ -1,0 +1,12 @@
+CREATE SCHEMA IF NOT EXISTS usuario;
+
+CREATE TABLE usuario.usuario (
+    id SERIAL PRIMARY KEY,
+    nome TEXT NOT NULL,
+    username TEXT UNIQUE NOT NULL,
+    password TEXT,
+    email TEXT UNIQUE NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP 
+);
+
